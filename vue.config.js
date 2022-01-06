@@ -5,5 +5,9 @@ module.exports = {
                 additionalData: '@import "@/styles/global.less";'
             }
         }
-    }
+    },
+
+    transpileDependencies: [
+      'vuetify'
+    ]
 }
