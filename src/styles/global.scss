@@ -1,4 +1,4 @@
-.flex-centered{
+@mixin flex-centered{
   display: flex;
   align-items: center;
   justify-content: center;

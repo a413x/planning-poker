@@ -1,8 +1,8 @@
 module.exports = {
     css: {
         loaderOptions: {
-            less: {
-                additionalData: '@import "@/styles/global.less";'
+            scss: {
+                additionalData: '@import "@/styles/global.scss";'
             }
         }
     },

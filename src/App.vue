@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import StartScreen from './components/start-screen/start-screen'
+import StartScreen from './components/start-screen/StartScreen'
 import {APPSTATES} from "@/constants";
 export default {
   name: 'App',
@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 body{
   position: absolute;
   top: 0;
@@ -30,7 +30,7 @@ body{
   bottom: 0;
 }
 #app {
-  .flex-centered;
+  @include flex-centered;
   width: 100%;
   height: 100%;
   font-family: Arial, sans-serif;

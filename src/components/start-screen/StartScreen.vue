@@ -28,9 +28,9 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .start-screen{
-    .flex-centered;
+    @include flex-centered;
     flex-flow: column;
     &__btn{
         margin-bottom: 20px;
