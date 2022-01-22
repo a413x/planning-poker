@@ -1,6 +1,6 @@
 <template>
     <button
-        class="text-button"
+        class="txt-button"
         :disabled="disabled"
         @click="$emit('click')"
     >
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.text-button{
+.txt-button{
     color: white;
     background: transparent;
     box-shadow: none;
