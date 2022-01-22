@@ -1,39 +1,44 @@
 <template>
-  <div id="app">
-    <StartScreen @select="stateChange"/>
-  </div>
+    <v-app>
+        <v-container class="fill-height justify-center" fluid>
+            <StartScreen v-if="isStartScreen" @select="stateChange"/>
+            <CreateForm v-else-if="isCreating" @back="back"/>
+            <JoinForm v-else-if="isJoining" @back="back"/>
+        </v-container>
+    </v-app>
 </template>
 
 <script>
 import StartScreen from './components/start-screen/StartScreen'
+import CreateForm from "@/components/create-form/CreateForm";
+import JoinForm from "@/components/join-form/JoinForm";
 import {APPSTATES} from "@/constants";
 export default {
   name: 'App',
-  components: { StartScreen },
+  components: { StartScreen, CreateForm, JoinForm },
   data: () => ({
     state: APPSTATES.STARTSCREEN
   }),
+  computed: {
+    isStartScreen(){ return this.state === APPSTATES.STARTSCREEN },
+    isCreating(){ return this.state === APPSTATES.CREATE },
+    isJoining(){ return this.state === APPSTATES.JOIN },
+  },
   methods: {
     stateChange(newState){
       this.state = newState
-    }
+    },
+    back(){ this.state = APPSTATES.STARTSCREEN }
   }
 }
 </script>
 
 <style lang="scss">
-body{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+html{
+  overflow: auto
 }
 #app {
-  @include flex-centered;
-  width: 100%;
-  height: 100%;
-  font-family: Arial, sans-serif;
   background: coral;
+  color: white;
 }
 </style>
