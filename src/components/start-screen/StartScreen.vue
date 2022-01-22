@@ -17,13 +17,12 @@
 
 <script>
 import TextButton from "@/components/elements/btn/TextButton";
-import {APPSTATES} from "@/constants";
 export default {
     name: 'StartScreen',
     components: { TextButton },
     methods: {
-        create() {this.$emit('select', APPSTATES.CREATE)},
-        join() {this.$emit('select', APPSTATES.JOIN)}
+        create() { this.$router.push('/create') },
+        join() { this.$router.push('/join') }
     }
 }
 </script>
