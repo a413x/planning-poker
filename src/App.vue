@@ -17,7 +17,7 @@ html{
   overflow: auto
 }
 #app {
-  background: coral;
+  background: #baaaa5;
   color: white;
 }
 </style>
