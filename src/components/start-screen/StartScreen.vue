@@ -1,25 +1,17 @@
 <template>
-    <div class="start-screen">
-        <TextButton
-            class="start-screen__btn"
-            @click="create"
-        >
+    <div class="start-screen d-flex flex-column align-center justify-center">
+        <v-btn plain color="white" class="text-h3 mb-7" @click="create">
             Create room
-        </TextButton>
-        <TextButton
-            class="start-screen__btn"
-            @click="join"
-        >
+        </v-btn>
+        <v-btn plain color="white" class="text-h3 mt-7" @click="join">
             Join room
-        </TextButton>
+        </v-btn>
     </div>
 </template>
 
 <script>
-import TextButton from "@/components/elements/btn/TextButton";
 export default {
     name: 'StartScreen',
-    components: { TextButton },
     methods: {
         create() { this.$router.push('/create') },
         join() { this.$router.push('/join') }
@@ -27,13 +19,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.start-screen{
-    @include flex-centered;
-    flex-flow: column;
-    &__btn{
-        margin-bottom: 20px;
-        font-size: 48px;
-    }
-}
-</style>
+<style lang="scss"></style>
