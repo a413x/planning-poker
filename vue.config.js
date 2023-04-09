@@ -1,13 +1,15 @@
 module.exports = {
-    css: {
-        loaderOptions: {
-            scss: {
-                additionalData: '@import "@/styles/global.scss";'
-            }
-        }
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: '@import "@/styles/global.scss";',
+      },
     },
+  },
 
-    transpileDependencies: [
-      'vuetify'
-    ]
-}
+  transpileDependencies: ["vuetify"],
+
+  devServer: {
+    proxy: "http://localhost:3000",
+  },
+};
