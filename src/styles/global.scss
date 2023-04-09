@@ -1,18 +1,14 @@
-@mixin flex-centered{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 @mixin styled-scrollbar {
   scrolbar-width: thin;
   &::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+    width: 7px;
+    height: 7px;
   }
   &::-webkit-scrollbar-track {
-    background: #ff2929;
+    background: #cbcbcb;
   }
   &::-webkit-scrollbar-thumb {
-    background: #ffffd8;
+    background: #e2e2e2;
+    border-radius: 4px;
   }
 }
